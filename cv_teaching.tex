@@ -1,0 +1,191 @@
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%
+%% Document Setup %%
+%%%%%%%%%%%%%%%%%%%%
+\usepackage[paper=letterpaper,top=1in, bottom=1in, right=1in, left=1in]{geometry}
+\setlength{\parindent}{0mm}
+\usepackage{fix-cm}
+\hyphenpenalty=1000000 % no auto-hypenation
+
+%%%%%%%%%%%%
+%% Tables %%
+%%%%%%%%%%%%
+\usepackage{array}
+\usepackage{bigstrut}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+%%%%%%%%%%%%%
+%% Columns %%
+%%%%%%%%%%%%%
+\usepackage{multicol}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Template Commands %%
+%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bigname}[3]{{\fontsize{#2}{#3}\selectfont #1}}
+\newcommand{\phyaddress}[3]{{\fontsize{#2}{#3}\selectfont #1}}
+\newcommand{\ncheader}[9]{
+  \newlength{\oldtabcolsep}
+  \setlength{\oldtabcolsep}{\tabcolsep}
+  \setlength{\tabcolsep}{2.0em}
+  \newlength{\oldbigstrutjot}
+  \setlength{\oldbigstrutjot}{\bigstrutjot}
+  \setlength{\bigstrutjot}{4pt}
+  \begin{tabularx}{\textwidth}{@{}X p{#3}@{}}
+    \multirow{2}[2]{*}[#4]{\centering\mbox{#1}} &
+    \makebox[\linewidth][s]{\fontsize{#8}{#9}\selectfont
+      \textrm{\mbox{#5} \mbox{#6}}} \bigstrut[t] \bigstrut[t] \\
+    & \makebox[\linewidth][s]{\fontsize{#8}{#9}\selectfont
+      \textrm{\mbox{#2} \mbox{#7}}} \bigstrut[t] \bigstrut[t] \\
+    &
+  \end{tabularx}
+  \setlength{\bigstrutjot}{\oldbigstrutjot}
+  \setlength{\tabcolsep}{\oldtabcolsep}
+  \let\oldtabcolsep\undefined
+}
+
+\newcommand{\secheader}[1]{
+
+  {\begin{tabularx}{\textwidth}{@{}X}
+    \midrule[0.095em] \\ \addlinespace[-1.2em]
+    #1 \\
+    \bottomrule[0.02em]
+  \end{tabularx}\hfill\\\\}
+}
+
+\newcommand{\itemplaceheader}[2]{
+  {\begin{tabular*}{\textwidth}{%
+        @{\extracolsep{\fill}}%
+        @{}l@{}%
+        @{}r@{}}
+      \textbf{#1} & {#2}
+  \end{tabular*}}
+}
+
+\newcommand{\itempositionheader}[2]{
+  {\setlength{\tabcolsep}{0em}
+    \begin{tabular*}{\textwidth}{%
+        @{\extracolsep{\fill}}
+        @{}l@{}%
+        @{}r@{}}
+      \textrm{#1} & \textrm{#2}
+  \end{tabular*}}
+}
+
+\begin{document}
+% \ncheader{\bigname{Ram Raghunathan}{38}{39}}
+%          {Pittsburgh, PA}
+%          {6cm}
+%          {0mm}
+%          {ram.r@cs.cmu.edu}
+%          {}
+%          {}
+%          {18}
+%          {19}
+
+\begin{center}
+  \bigname{Janani Kalyanam}{25}{25} \\[0.75em]
+  jkalyana@ucsd.edu OR janani.kalyanam@gmail.com \\
+    Work Permit:  US Citizen \\
+\end{center}
+
+\secheader{Summary}
+\small{I have served as Teaching Assistant to various computer science 
+courses at UCSD over the course of my graduate student career.  
+I have been responsible for a variety of duties including holding
+office hours, discussion sessions, occasional lectures, preparing and
+grading the exams/homeworks and their rubrics etc.
+After the first few quarters of being a teaching assistant, I was elevated to
+being head-TA of a course.  Being head-TA also entailed additional responsibility
+of managing a team of teaching assistants, assigning duties, and making sure
+we deliver.}
+
+
+\secheader{Education}
+\itemplaceheader{University of California, San Diego}{}
+\itempositionheader {Ph.D. in Electrical and Computer Engineering, Spring 2017 (expected)} {}
+Specialization: Machine Learning, Data Science \\
+
+\itemplaceheader{University of Wisconsin, Madison}{}
+\itempositionheader {M.S. in Electrical and Computer Engineering}{} 
+
+\itemplaceheader{Rutgers, State University of New Jersey}{}
+\itempositionheader {B.S. in Electrical and Computer Engineering}{}
+James. J. Slades Scholar for academic excellence \\
+Dean's List, all semesters \\
+
+\secheader{Skills}
+Languages: C, C++, Java, Python, Matlab, LaTeX \\ 
+Operating System: Linux, MAX, Windows \\
+
+\secheader{Teaching Experience}
+TA for C-programming, Assembly Programming, and Computer Architecture courses. \\
+Held a tutorial of Machine Learning at conferences.\\
+
+\secheader{Publications}
+\textbf{Janani Kalyanam}, Mauricio Quezada, Barbara Poblete and Gert Lanckriet. (2015). 
+``Early prediction and characterization of high-impact world events using social media.''
+\textit{Preprint} \\
+
+\textbf{Janani Kalyanam}, Amin Mantrach, Diego Saez-Trumper, Hossein Vahabi and Gert Lanckriet. (2015). 
+``Leveraging Social Context for Modeling Topic Evolution.''
+\textit{Proceedings of the 21st International Conference on Knowledge Discovery and Data Mining (KDD).} \\
+
+\textbf{Janani Kalyanam}, Sumithra Velupillai, Son Doan, Mike Conway and
+Gert Lanckriet. (2015). ``Facts and Fabrications about Ebola:  A Twitter
+Based Study'' \textit{SIGKDD Workshop on Connected Health in Big Data Era.} \\
+\textbf{Best Paper Award.}\\
+
+\textbf{Janani Kalyanam} and Gert Lanckriet.
+(2014). ``Learning from Unstructured Multimedia Data.'' \textit{Proceedings of the
+23rd International Conference on World Wide Web (WWW).} \\
+
+Andrew Bolstad, Benjamin Miller, Joel Goodman and \textbf{Janani Kalyanam}. (2011). 
+``Identification and Compensation of Wiener Hammerstein Systems with Feedback.'' 
+\textit{Proceedings of the 36th International Conference on Accoustics, Speech and
+Signal Processing.} \\
+
+Joel Goodman, Benjamin Miller, Andrew Bolstad, Jim Vian and \textbf{Janani Kalyanam}. (2011). 
+``Physical Layer Considerations for Wideband Cognitive Radio.''
+\textit{Military Communications Conference, 2011.} \\
+
+\textbf{Janani Kalyanam.}  (2009).
+``Probabilistic Algorithm for List-Viterbi Decoding.''
+\textit{Masters Thesis.} \\
+
+Chandrasekharan Raman, \textbf{Janani Kalyanam}, Ivan Seskar and Narayan Mandayam.  (2007).
+``Distributed Spatio Temporal Spectrum Sensing:  An Experimental Study.''
+\textit{Asilomar Conference on Signals, Systems and Computers.} \\
+\secheader{Work Experience}
+\itemplaceheader{University of California, San Diego}{La Jolla, CA}
+\itempositionheader{Teaching Assistant}{}
+Served as TA for programming courses at UCSD several times.\\ 
+\hfill \\
+\itemplaceheader{Massachusetts Institute of Technology - Lincoln Labs}{Lexinton, MA}
+\itempositionheader{Intern}{2009}
+Worked on calibrating power amplifiers. \\ 
+\hfill \\
+\itemplaceheader{Merrill Lynch}{Pennington, NJ}
+\itempositionheader{Intern}{2007}
+Web developer \\
+\hfill \\
+\itemplaceheader{Merrill Lynch}{Pennington, NJ}
+\itempositionheader{Intern}{2006}
+System tester for the internal interactive voice response systems \\
+\hfill \\
+
+\secheader{Miscellaneous}
+Completed the La Jolla Half Marathon (2013), Southern California Half Marathon (2014), and
+the Girls on the Go Run Half Marathon (2014).
+
+\end{document}
+
+% Local Variables:
+% coding: utf-8
+% mode: latex
+% TeX-engine: xetex
+% TeX-master: t
+% End:

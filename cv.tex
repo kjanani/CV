@@ -1,0 +1,196 @@
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%
+%% Document Setup %%
+%%%%%%%%%%%%%%%%%%%%
+\usepackage[paper=letterpaper,top=1in, bottom=1in, right=1in, left=1in]{geometry}
+\setlength{\parindent}{0mm}
+\usepackage{fix-cm}
+\hyphenpenalty=1000000 % no auto-hypenation
+\usepackage{hyperref}
+%%%%%%%%%%%%
+%% Tables %%
+%%%%%%%%%%%%
+\usepackage{array}
+\usepackage{bigstrut}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+%%%%%%%%%%%%%
+%% Columns %%
+%%%%%%%%%%%%%
+\usepackage{multicol}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Template Commands %%
+%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bigname}[3]{{\fontsize{#2}{#3}\selectfont #1}}
+\newcommand{\phyaddress}[3]{{\fontsize{#2}{#3}\selectfont #1}}
+\newcommand{\ncheader}[9]{
+  \newlength{\oldtabcolsep}
+  \setlength{\oldtabcolsep}{\tabcolsep}
+  \setlength{\tabcolsep}{2.0em}
+  \newlength{\oldbigstrutjot}
+  \setlength{\oldbigstrutjot}{\bigstrutjot}
+  \setlength{\bigstrutjot}{4pt}
+  \begin{tabularx}{\textwidth}{@{}X p{#3}@{}}
+    \multirow{2}[2]{*}[#4]{\centering\mbox{#1}} &
+    \makebox[\linewidth][s]{\fontsize{#8}{#9}\selectfont
+      \textrm{\mbox{#5} \mbox{#6}}} \bigstrut[t] \bigstrut[t] \\
+    & \makebox[\linewidth][s]{\fontsize{#8}{#9}\selectfont
+      \textrm{\mbox{#2} \mbox{#7}}} \bigstrut[t] \bigstrut[t] \\
+    &
+  \end{tabularx}
+  \setlength{\bigstrutjot}{\oldbigstrutjot}
+  \setlength{\tabcolsep}{\oldtabcolsep}
+  \let\oldtabcolsep\undefined
+}
+
+\newcommand{\secheader}[1]{
+
+  {\begin{tabularx}{\textwidth}{@{}X}
+    \midrule[0.095em] \\ \addlinespace[-1.2em]
+     \uppercase{\large{#1}} \\
+    %\bottomrule[0.02em]
+  \end{tabularx}\hfill\\\\}
+}
+
+\newcommand{\itemplaceheader}[2]{
+  {\begin{tabular*}{\textwidth}{%
+        @{\extracolsep{\fill}}%
+        @{}l@{}%
+        @{}r@{}}
+      \textbf{#1} & {#2}
+  \end{tabular*}}
+}
+
+\newcommand{\itempositionheader}[2]{
+  {\setlength{\tabcolsep}{0em}
+    \begin{tabular*}{\textwidth}{%
+        @{\extracolsep{\fill}}
+        @{}l@{}%
+        @{}r@{}}
+      \textrm{#1} & \textrm{#2}
+  \end{tabular*}}
+}
+
+\begin{document}
+% \ncheader{\bigname{Ram Raghunathan}{38}{39}}
+%          {Pittsburgh, PA}
+%          {6cm}
+%          {0mm}
+%          {ram.r@cs.cmu.edu}
+%          {}
+%          {}
+%          {18}
+%          {19}
+
+\begin{center}
+  \bigname{Janani Kalyanam}{25}{25} \\[0.75em]
+  jkalyana@ucsd.edu OR janani.kalyanam@gmail.com \\
+    Work Permit:  US Citizen \\
+    Website: \url{acsweb.ucsd.edu/~jkalyana}
+\end{center}
+\secheader{Summary}
+\small{I build machine learning based tools to extract useful information from social media
+which is inherently unstructured and noisy.  I develop innovative unsupervised methods
+that can accommodate for the unstructured nature in the data,
+and combat the noise efficiently.  I have used these methods predominantly on Twitter data to (1) discover trends of drug abuse,
+(2) identify illicit online pharmacies, and (3) identify high-impact news events at the
+early stages of their outbreak.}
+\secheader{Education}
+\itemplaceheader{University of California, San Diego}{La Jolla, CA}
+\itempositionheader {Ph.D. in Electrical and Computer Engineering} {Expected Spring 2017}
+Advisor: Professor Gert Lanckriet\\  
+Research keywords: social networks, machine learning, data science, unsupervised learning, NLP\\
+
+\itemplaceheader{University of Wisconsin}{Madison, WI}
+\itempositionheader {M.S. in Electrical and Computer Engineering} {2009}
+%Thesis: ``Probabilistic Algorithm for List Viterbi Decoding''\\
+%Advisor: Professor Stark Draper \\
+
+\itemplaceheader{Rutgers University}{New Brunswick, NJ}
+\itempositionheader {B.S. in Electrical and Computer Engineering} {2007}
+%James. J. Slades Scholar for academic excellence \\
+%Dean's List, all semesters \\
+
+\secheader{Relevant Courses}
+Statistical Learning, Convex Optimization, Parameter Estimation, Manifold Learning, Kernel Methods\\
+
+\secheader{Skills}
+Languages: C, C++, Java, Python, Matlab, LaTeX \\
+Operating System: Linux, Windows, MAC \\
+
+\secheader{Publications}
+\textbf{Janani Kalyanam}, Mauricio Quezada, Barbara Poblete and Gert Lanckriet (2016). 
+``Prediction and Characterization of High-Activity Events in Social Media Triggered by Real-World News''
+\textit{PLOS ONE} \\
+
+\textbf{Janani Kalyanam}, Takeo Katsuki, Gert Lanckriet and Tim Mackey (2016).
+``Exploring Trends of Nonmedical use of Prescription Drugs and Polydrug Abuse in the Twittersphere Using Unsupervised Machine Learning''
+\textit{Addictive Behaviors} \\
+
+\textbf{Janani Kalyanam}, Sumithra Velupillai, Mike Conway and Gert Lanckriet (2016).
+``From Event Detection to Story Telling on Microblogs''
+\textit{Proceedings of the ACM/IEEE Conference on Advances in Social Network Analysis and Mining (ASONAM)} \\
+
+\textbf{Janani Kalyanam}, Amin Mantrach, Diego Saez-Trumper, Hossein Vahabi and Gert Lanckriet (2015). 
+``Leveraging Social Context for Modeling Topic Evolution.''
+\textit{Proceedings of the 21st International Conference on Knowledge Discovery and Data Mining (KDD).} \\
+
+\textbf{Janani Kalyanam}, Sumithra Velupillai, Son Doan, Mike Conway and
+Gert Lanckriet (2015). ``Facts and Fabrications about Ebola:  A Twitter
+Based Study'' \textit{SIGKDD Workshop on Connected Health in Big Data Era.} \\
+\textbf{Best Paper Award.}\\
+
+\textbf{Janani Kalyanam} and Gert Lanckriet (2014). 
+``Learning from Unstructured Multimedia Data.'' \textit{Proceedings of the
+23rd International Conference on World Wide Web (WWW).} \\
+
+Andrew Bolstad, Benjamin Miller, Joel Goodman and \textbf{Janani Kalyanam} (2011). 
+``Identification and Compensation of Wiener Hammerstein Systems with Feedback.'' 
+\textit{Proceedings of the 36th International Conference on Accoustics, Speech and
+Signal Processing.} \\
+
+Joel Goodman, Benjamin Miller, Andrew Bolstad, Jim Vian and \textbf{Janani Kalyanam} (2011). 
+``Physical Layer Considerations for Wideband Cognitive Radio.''
+\textit{Military Communications Conference, 2011.} \\
+
+\textbf{Janani Kalyanam.}  (2009).
+``Probabilistic Algorithm for List-Viterbi Decoding.''
+\textit{Masters Thesis.} \\
+
+Chandrasekharan Raman, \textbf{Janani Kalyanam}, Ivan Seskar and Narayan Mandayam (2007).
+``Distributed Spatio Temporal Spectrum Sensing:  An Experimental Study.''
+\textit{Asilomar Conference on Signals, Systems and Computers.} \\
+
+\secheader{Work Experience}
+\itemplaceheader{University of California, San Diego}{La Jolla, CA}
+\itempositionheader{Teaching Assistant}{}
+Served as TA for programming courses at UCSD several times.\\ 
+\hfill \\
+\itemplaceheader{NEC Labs}{Princeton, NJ}
+\itempositionheader{Research Intern}{2016}
+Worked on mining non-linear dependencies via neighborhood mixtures \\ 
+\hfill \\
+\itemplaceheader{Massachusetts Institute of Technology - Lincoln Labs}{Lexinton, MA}
+\itempositionheader{Intern}{2009}
+Worked on calibrating power amplifiers. \\ 
+\hfill \\
+\itemplaceheader{Merrill Lynch}{Pennington, NJ}
+\itempositionheader{Intern}{2006, 2007}
+Web developer, Testing for IVRs \\
+
+\secheader{Miscellaneous}
+Completed the La Jolla Half Marathon (2013), Southern California Half Marathon (2014), and
+the Girls on the Go Run Half Marathon (2014).
+
+\end{document}
+
+% Local Variables:
+% coding: utf-8
+% mode: latex
+% TeX-engine: xetex
+% TeX-master: t
+% End:
